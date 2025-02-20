@@ -21,6 +21,7 @@ by：响应云安全
 ```
 漏洞库/
 ├── app.py
+|—— app.exe
 ├── templates/
 │   ├── index.html
 │   ├── search.html
