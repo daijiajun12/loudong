@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ vuln_id }}</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .file-list {
+            border: 1px solid #0f0;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .file-item {
+            padding: 10px;
+            border-bottom: 1px dashed #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔓 漏洞编号: {{ vuln_id }}</h1>
+    <div class="file-list">
+        <h2>📂 文档列表:</h2>
+        {% for md_file in md_files %}
+            <div class="file-item">
+                <a href="/view_md/{{ vuln_id }}/{{ md_file }}">{{ md_file }}</a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

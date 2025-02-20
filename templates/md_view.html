@@ -1,0 +1,48 @@
+<!-- templates/md_view.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ vuln_id }} - {{ filename }}</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .keyword {
+            color: blue;
+            font-weight: bold;
+        }
+        .code-block {
+            background: #111;
+            color: #0f0;
+            padding: 10px;
+            border: 1px solid #0f0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .inline-code {
+            background: #111;
+            color: #0f0;
+            padding: 2px 4px;
+            border: 1px solid #0f0;
+            border-radius: 4px;
+        }
+        u {
+            text-decoration: underline;
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔓 漏洞编号: {{ vuln_id }}</h1>
+    <h2>📜 文件: {{ filename }}</h2>
+    <div class="content">
+        {{ content|safe }}
+    </div>
+</body>
+</html>

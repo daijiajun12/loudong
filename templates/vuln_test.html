@@ -1,0 +1,85 @@
+<!-- templates/vuln_test.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>漏洞检测工具</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            background: #111;
+            color: #0f0;
+            border: 1px solid #0f0;
+            padding: 10px;
+            width: 100%;
+            font-family: inherit;
+        }
+        button {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: inherit;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0d0;
+        }
+        .response {
+            margin-top: 20px;
+            background: #111;
+            color: #0f0;
+            padding: 10px;
+            border: 1px solid #0f0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔓 漏洞检测工具</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required>
+        </div>
+        <div class="form-group">
+            <label for="method">方法:</label>
+            <select id="method" name="method" required>
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="payload">Payload:</label>
+            <textarea id="payload" name="payload" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="headers">Headers (JSON):</label>
+            <textarea id="headers" name="headers" rows="5">{}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="cookies">Cookies (JSON):</label>
+            <textarea id="cookies" name="cookies" rows="5">{}</textarea>
+        </div>
+        <button type="submit">发送请求</button>
+    </form>
+    <div class="response">
+        {{ response|safe }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应云漏洞数据库</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .search-box {
+            margin-top: 50px;
+            text-align: center;
+        }
+        input {
+            background: #111;
+            color: #0f0;
+            border: 1px solid #0f0;
+            padding: 10px;
+            width: 300px;
+            font-family: inherit;
+        }
+        button {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: inherit;
+            margin-left: 10px;
+        }
+        button:hover {
+            background: #0d0;
+        }
+        h1 {
+            text-shadow: 0 0 10px #0f0;
+            margin-top: 100px;
+        }
+        .nav-link {
+            margin-top: 20px;
+            color: #0f0;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            text-shadow: 0 0 5px #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>响应云漏洞数据库 v1.0 </h1>
+    <div class="search-box">
+        <form action="/search" method="GET">
+            <input type="text" name="q" placeholder="输入漏洞编号或关键词...">
+            <button type="submit">开始扫描</button>
+        </form>
+    </div>
+    <a href="/vuln_test" class="nav-link">漏洞检测工具</a>
+</body>
+</html>

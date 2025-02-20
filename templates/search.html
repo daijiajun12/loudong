@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>扫描结果</title>
+    <style>
+        body {
+            background: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+        }
+        .result-list {
+            border: 1px solid #0f0;
+            padding: 20px;
+            margin-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a {
+            color: #0f0;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #0d0;
+            text-shadow: 0 0 5px #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-list">
+        <h2>📡 发现 {{ results|length }} 个匹配项:</h2>
+        {% for result in results %}
+            <p>> <a href="/vulnerability/{{ result }}">{{ result }}</a></p>
+        {% endfor %}
+    </div>
+</body>
+</html>
