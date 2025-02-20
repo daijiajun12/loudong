@@ -63,4 +63,14 @@ requests
 ## 运行应用
 
 直接点击exe文件即可然后浏览器访问 http://127.0.0.1:5000/
+## 页面照片
+        ![局部截取_20250220_114825](https://github.com/user-attachments/assets/b233d885-02f6-46eb-9fba-639c62c57e78)
+
+        ![局部截取_20250220_114923](https://github.com/user-attachments/assets/9ef4cfe4-4c6f-48b3-9298-0b21fdaafdf4)
         
+        ![局部截取_20250220_114944](https://github.com/user-attachments/assets/d6abb3b0-b8fc-4cdb-abc6-2c8ae31da75e)
+
+
+
+        
+
